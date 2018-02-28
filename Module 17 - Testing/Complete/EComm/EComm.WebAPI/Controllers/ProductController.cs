@@ -48,14 +48,14 @@ namespace EComm.WebAPI.Controllers
                 return NotFound();
             }
 
-            // Helper Method
-            //return Ok(product);
 
             // ObjectResult base class for Helper Methods
             Logger.LogInformation($"****** Get(int id): Product with Id={id} Returned");
-            return new ObjectResult(product);
+            //return new ObjectResult(product);
+            // Helper Method
+            return Ok(product);
         }
-        
+
         // POST: api/Product
         [HttpPost]
         public IActionResult Post([FromBody]Product product)
