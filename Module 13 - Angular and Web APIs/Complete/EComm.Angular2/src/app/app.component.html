@@ -1,0 +1,13 @@
+<section class="productapp">
+	<header class="header">
+  		<h1>Products</h1>
+	</header>
+
+	<section class="main" *ngIf="products.length > 0">
+  		<ul class="product-list">
+    			<li *ngFor="let product of products">
+      				<label>${{product.unitPrice.toFixed(2)}} {{product.productName}}</label>
+    			</li>
+  		</ul>
+	</section>
+</section>
